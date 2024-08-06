@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+    <style>
+        /* @media not | only media type and (media feature) and (media feature){
+            //css
+        } */
+
+        /* 
+
+        desktop: width (above 1280) (min 1280)
+        laptop: width (768 to 1280) (min 768 to max 1280)
+        tablet-protrait: width( 480 to 768) (min 480 to max 768)
+        tablet-landscape: width( 480 to 768) (min 480 to max 768)
+        mobile-protrait: width (below 480) (max 480)
+        mobile-landscape: width (below 480) (max 480)
+
+
+        */
+        body{
+        
+            /* this woriks on screen size from 480 to 768px */
+            @media screen and (min-width: 480px) and (max-width: 768px){
+                background-color: blue;
+            }
+            @media screen and (max-width: 480px){
+                background-color: greenyellow;
+                /* width: calc(100% - 30px); */
+            }
+        }
+        h1{
+            font-size: 44px;
+            /* this works on screen size from 480 to 768px */
+            @media screen and (min-width: 480px) and (max-width: 768px){ 
+                color: aliceblue;
+               
+            }
+        }
+        /* @media screen and (max-width: 480px){
+            body{
+                background-color: blue;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <h1>this is heading 1</h1>
+    
+</body>
+</html>

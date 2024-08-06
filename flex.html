@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        body{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            
+
+        }
+        .div1{
+            height: 800px;
+            /* width: 1200px; */
+            background-color: antiquewhite;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            /* gap: 80px; */
+            /* flex-basis: 200px; */
+            /* gap: 20px; */
+            row-gap: 20px;
+            column-gap: 20px;
+            /* flex-wrap: wrap; */
+        }
+        .div5{
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+            color: aliceblue;
+            flex-grow: 1;
+            /* flex: 0; */
+
+            display: flex;
+            flex-direction: column/row;
+            justify-content: center/start/end/space-between;
+            align-items: start/center/end/justify;
+
+        }
+        .grow1{
+            flex-grow: 1.5;
+        }
+        .grow2{
+            flex: 2 200px;
+            order: -1;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="div5">
+        1
+    </div>
+
+    <div class="div5">2</div>
+
+    <div class="div5 shrink">3</div>
+
+    <div class="div5">4</div>
+    <div class="div5">4</div>
+    <div class="div5">4</div>
+    <div class="div5">4</div>
+    <div class="div5">4</div>
+    <div class="div5">4</div>
+    <div class="div5">4</div>
+    <div class="div5">4</div>
+    <div class="div5">4</div>
+    <div class="div5">4</div>
+    <div class="div5">4</div>
+    <div class="div5">4</div>
+    <div class="div5 grow1">4</div>
+    <div class="div5 grow2">last</div>
+
+
+    <!-- <div class="div1">
+        
+    </div> -->
+    
+</body>
+</html>
