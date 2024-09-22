@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cardContainer{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+
+}

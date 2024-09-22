@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <!-- A promise in JavaScript is like a guarantee that something will happen in the future. It's an object that represents the eventual completion (or failure) of an asynchronous operation. You can think of it as a "promise" to do something when a task is finished.
+
+    If the task is successful, the promise is "fulfilled," and you get a result.
+    If something goes wrong, the promise is "rejected," and you get an error.
+    You can use .then() to handle the result when the promise is fulfilled and .catch() to handle any errors if the promise is rejected. 
+
+    A promise in JavaScript is an object representing the eventual completion or failure of an asynchronous operation and its resulting value. It's a way of handling asynchronous code in a more readable and predictable way.
+
+    A promise has three states:
+
+    1. Pending: The initial state when the promise is created.
+    2. Fulfilled: The state when the promise is resolved successfully with a value.
+    3. Rejected: The state when the promise is rejected with an error.
+-->
+    <h1>Example of Promise</h1>
+    <script>
+
+        function ready (){
+            console.log("ready")
+        }
+        ready();
+
+        // function set (callback){
+        //     setTimeout(() => {
+        //         console.log("Set");
+        //         callback();
+        //     }, 2000);
+        // }
+        // set(go);
+
+        // function go(){
+        //     console.log("Go")
+        // }
+
+
+        
+        // set(go);
+
+        const isTrue = true;
+        // const promise = new Promise((resolve, reject)=>{
+        //     if (isTrue) {
+        //         resolve();
+        //     }
+        //     else{
+        //         reject()
+        //     }
+        // })
+
+        // promise
+        //     .then(()=>{
+        //         SetGo();
+        //     })
+        //     .catch(()=>{
+        //         console.log("there is an error")
+        //     })
+
+        // function SetGo(){
+        //     console.log("set");
+        //     console.log("Go")
+        // }
+
+        // multiple promise
+
+        const numbers = new Promise((resolve, reject)=>{
+            if (isTrue) {
+                resolve([1, 2, 3, 4, 5]);
+            }
+            else{
+                reject();
+            }
+        })
+
+        numbers
+            .then((data)=>{
+                return data.map((num)=> num*2);
+            })
+            .then((data)=>{
+                console.log("then1: "+ data);
+                return data.map((num)=> num+1 );
+            })
+            .then((data)=>{
+                console.log("then2: "+data);
+            })
+            .catch(()=>{
+                console.log("Error Fetching Data");
+            })
+            .finally(()=>{
+                console.log("I can run in any situation")
+            })
+
+
+        
+    </script>
+</body>
+</html>

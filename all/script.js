@@ -18,15 +18,16 @@ var b=0;
 document.getElementsByClassName("docWrite");
 // const btn = document.getElementById("click");
 const output = document.getElementById("output");
+// document.querySelector("./#")
 
 function clickHandle(){
     
     // document.write(" you click me")
     b++;//b=b+1
-    console.log("you have clicked me " + b  + " times");
+    console.log("you have clicked me "+ b +" times");
 
     output.innerHTML = "you clicked me " +b+ " times.";
-    alert("you clicked me " +b+ " times.");
+
 }
 
 

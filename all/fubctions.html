@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions in js</title>
+</head>
+<body>
+
+
+    <input type="text" id="number">
+
+    <h3>click to check positive or negative</h3>
+
+    <button onclick="checkPositive()">Check</button>
+    <h1 id="result"></h1>
+
+
+    <!-- <button onClick="check(4)">Check</button>
+    <h3 id="number"> </h3>
+
+    <h5 id="result"></h5> -->
+
+
+    
+    <script>
+        /*
+        types of functions
+        1. normal function  
+            function function_name () ={
+                methods or statements
+            }
+
+            function_name();
+
+        2. argumented function
+
+            function function_name (arguments,.....) ={
+                methods or statements
+            }
+
+            function_name(arguments,.....);
+
+        3. arrow function
+
+            const hello = () => {
+                statements
+            }
+
+            hello();
+
+        
+        */
+
+        // function hello (){
+        //     console.log("Chin tapak dum dum!!!!")
+
+        // }
+
+        // hello();
+
+        // function sum (b, a){
+        //     // console.log (a+b);
+        //     return a+b;
+        // }
+        
+        // console.log (sum(3, 5));
+        
+        // var sum = (a, b) => {
+        //     return a+b;
+        // }
+        // console.log (sum(4,5));
+        // const result = document.getElementById("result");
+        // function check (number){
+        //     document.getElementById("number").innerHTML= "your given number is" + number;
+        //     if (number%2==0) {
+        //         result.innerHTML= "your given number "+number+" is even";
+        //         return number + " is even number"
+        //     } else {
+        //         result.innerHTML= "your given number "+number+" is odd";
+        //         return number + " is odd number"
+                
+        //     }
+        // }
+
+        // console.log(check(4));
+
+
+        
+        // console.log(input);
+        
+        function checkPositive(){
+            var input = document.getElementById("number");
+            var inputValue = parseInt(input.value);
+            const result = document.getElementById("result");
+
+
+            if ( inputValue >= 0 ) {
+
+                result.innerHTML = inputValue + " is positive number";
+
+            } else {
+                result.innerHTML = inputValue + " is negative number";
+                
+            }
+
+        }
+        
+
+
+
+
+    </script>
+
+</body>
+</html>

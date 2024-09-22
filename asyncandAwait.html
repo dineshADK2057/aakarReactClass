@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async and Await</title>
+  </head>
+  <body>
+    <!-- 
+    # Async & Await
+async/await is a syntax feature in modern versions of JavaScript (ES2017 or later) that allows developers to write asynchronous code in a more readable and concise way.
+
+### Async
+
+async is a keyword that is used to define a function as asynchronous. An asynchronous function is one that can perform long-running tasks without blocking the execution of other code in the same thread.
+
+When a function is marked as async, it returns a Promise that resolves to the return value of the function or to an error if one occurs. The Promise allows you to chain asynchronous operations together and handle the results using try() and catch() methods.
+    -->
+
+    <script>
+      // using prommise
+
+      // const promise = new Promise((resolve, rejected)=>{
+      //     reject(3+4)
+      // })
+      // console.log(promise);
+
+      //   async function sum(a, b) {
+      //     return a + b;
+      //   }
+      // //   sum.try((data) => {
+      // //     console.log(data);
+      // //   });
+      //   sum(3, 4)
+      //     .then((data) => {
+      //       console.log(data); // outputs 5
+      //     })
+      //     .catch((error) => {
+      //       console.error(error);
+      //     });
+
+      // using promise
+
+      // const isTrue = false;
+      // const promise = new Promise((resolve, reject)=>{
+      //     if (isTrue) {
+      //         resolve("this is fulfilled");
+      //     }
+      //     else{
+      //         reject()
+      //     }
+      // })
+
+      // promise
+      //     .then((data)=>{
+      //         console.log(data);
+
+      //     })
+      //     .catch(()=>{
+      //         console.log("there is an error")
+      //     })
+
+      // using async
+
+      // async function isTrue(value){
+      //     if(value){
+      //         return "success";
+      //     }
+      //     else{
+      //         throw "Error"
+      //     }
+      // }
+
+      // isTrue(false).then((data)=>{
+      //     console.log(data);
+      // }).catch((data)=>{
+      //     console.log(data);
+
+      // })
+
+      // Using promise
+
+    //   const fetchData = new Promise((resolve, reject) => {
+    //     const error = false;
+    //     if (error) {
+    //       reject("Some Error");
+    //     }
+    //     setTimeout(() => {
+    //       const data = [1, 2, 3, 4, 5];
+    //       resolve(data);
+    //     }, 2000);
+    //   });
+
+    //   fetchData
+    //     .then((data) => {
+    //       console.log(data);
+    //     })
+    //     .catch((error) => {
+    //       console.log(error);
+    //     });
+
+
+//     ### **Await**
+
+// **`await`** is a keyword that is used within an **`async`** function to pause the execution of the function until a Promise is resolved. When used with a Promise, the **`await`**keyword waits for the Promise to resolve and then returns the resolved value.
+    // using async await
+
+      async function fetchData() {
+        const error = true;
+
+        if (error) {
+          throw new Error("Some Error");
+        } else {
+          const data = [1, 2, 3, 4, 5];
+          return data;
+        }
+      }    
+
+      async function processData() {
+        try {
+          const data = await fetchData();
+          console.log(data);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      processData();
+
+
+    </script>
+  </body>
+</html>
