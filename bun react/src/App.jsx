@@ -2,9 +2,33 @@ import styled from 'styled-components'
 import './App.css'
 import Card, { ImgCard } from './components/Card/Card'
 import StateHook from './components/usestate/StateHook'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Layout from './components/uiComponents/Layout'
+import NewComponent from './NewComponent'
 
 
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout/>,
+      children: [
+        {
+          path: "/",
+          element: <StateHook/>,
+        },
+        {
+          path: "/card",
+          element: <Card />,
+        },
+        {
+          path: "/new",
+          element: <NewComponent />,
+        },
+      ]
+    },
+  ]);
 
   return (
     <>
@@ -25,7 +49,9 @@ function App() {
         this is info div
       </div> */}
 
-      <StateHook/>
+      {/* <StateHook/> */}
+
+      <RouterProvider router={router} />
 
     </>
   )

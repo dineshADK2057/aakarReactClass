@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types'
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 // import './Card.css'
 
 const Card = ({ title, image }) => {
   return (
+    <>
+    
     <ImgCard>
       <img src={image} alt="image" width="100%" />
       <div className='info'>
@@ -13,6 +16,7 @@ const Card = ({ title, image }) => {
         <button>Read More</button>
       </div>
     </ImgCard>
+    </>
     
   )
 }
