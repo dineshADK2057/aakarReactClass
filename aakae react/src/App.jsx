@@ -24,7 +24,8 @@ function App() {
       <h1>Your message is: </h1>
       <p>{message}</p>
 
-      <h5>dcharacter count: {message.length}</h5>
+      <h5>character count: {message.length}</h5>
+      <h5>word count: {message.split(" ").length}</h5>
 
       <br />
       <button onClick={()=>{
