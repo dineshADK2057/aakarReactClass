@@ -5,6 +5,7 @@ import StateHook from './components/usestate/StateHook'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/uiComponents/Layout'
 import NewComponent from './NewComponent'
+import Form from './components/formHandel/Form'
 
 
 function App() {
@@ -21,6 +22,10 @@ function App() {
         {
           path: "/card",
           element: <Card />,
+        },
+        {
+          path: "/form",
+          element: <Form />,
         },
         {
           path: "/new",

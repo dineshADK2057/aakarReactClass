@@ -10,6 +10,8 @@ export default function Header() {
             <Link to="/card">card</Link>
             <Link to="/new">New</Link>
             
+            <Link to="/form">Form</Link>
+            
         </HeaderSection>
   )
 }
