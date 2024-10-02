@@ -11,6 +11,7 @@ export default function Header() {
             <Link to="/new">New</Link>
             
             <Link to="/form">Form</Link>
+            <Link to="/formhook">Form Hook</Link>
             
         </HeaderSection>
   )

@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/uiComponents/Layout'
 import NewComponent from './NewComponent'
 import Form from './components/formHandel/Form'
+import FormHook from './components/formHandel/FormHook'
 
 
 function App() {
@@ -26,6 +27,10 @@ function App() {
         {
           path: "/form",
           element: <Form />,
+        },
+        {
+          path: "/formhook",
+          element: <FormHook />,
         },
         {
           path: "/new",
