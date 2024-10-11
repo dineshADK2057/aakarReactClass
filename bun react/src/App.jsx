@@ -7,6 +7,8 @@ import Layout from './components/uiComponents/Layout'
 import NewComponent from './NewComponent'
 import Form from './components/formHandel/Form'
 import FormHook from './components/formHandel/FormHook'
+import ProductPage from './components/Products/ProductPage'
+import ProductList from './components/Products/ProductList'
 
 
 function App() {
@@ -35,6 +37,14 @@ function App() {
         {
           path: "/new",
           element: <NewComponent />,
+        },
+        {
+          path: "/products",
+          element: <ProductList />,
+        },
+        {
+          path: "/product/:productId",
+          element: <ProductPage />,
         },
       ]
     },

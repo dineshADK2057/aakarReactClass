@@ -65,7 +65,7 @@ export default function StateHook() {
                     <p>No articles found.</p>
                 )}
 
-                (condition) ? (statements if true) : (statements if false);
+                {/* (condition) ? (statements if true) : (statements if false); */}
             </div>
 
         </>
